@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  Mayor Poder: {{poder}}
+	<div class="row">
+		<div class="col" *ngFor="let i of heroes" Style="padding: 0">
+
+			<div class="card" Style="padding: 0">
+				<div class="card-body" Style="padding: 0">
+          <img class="img-fluid" src="{{i.image}}">
+				    <b>{{i.name}}</b>
+              <ul>
+                <li>Inteligencia:{{i.wisdom}}</li>
+
+                <li>Poder: {{i.power}}</li>
+              </ul>
+              <div>
+              <a class="btn btn-primary"
+							[routerLink]="['/heroes', { outlets: { 'bottom': [i.id] } }]">Ver Perfil</a>
+	            </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

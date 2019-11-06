@@ -1,0 +1,30 @@
+
+<b>Name: </b>{{heroDetail.name}}
+<br/>
+<p Style = "word-break: break-all"><b>Descripción: </b>{{heroDetail.text}}</p>
+<div class="col"  Style="padding: 0">
+
+  		<table class="table table-striped">
+			<thead class="thead-dark">
+				<tr>
+					<th>#</th>
+          <th>Name</th>
+          <th>year</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let i of heroDetail.movies">
+					<td style="cursor: pointer;">
+						{{i.id}}
+					</td>
+          <td >
+						{{i.name}}
+					</td>
+           <td >
+						{{i.year}}
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+</div>
